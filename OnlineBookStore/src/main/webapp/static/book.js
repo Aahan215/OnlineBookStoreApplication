@@ -136,134 +136,6 @@ function deleteBook(id) {
     });
 }
 
-// FILE UPLOAD METHODS
-var fileData = [];
-var errorData = [];
-var fileErrorData=[];
-var processCount = 0;
-
-function processData() {
-    var file = $('#BookFile')[0].files[0];
-    var tsv = (file) => file.toLowerCase().endsWith('.tsv');
-    if (!tsv) {
-        console.log("Invalid file format: Not TSV.");
-        warning("Invalid file format: Not TSV.");
-        return;
-    } else {
-        readFileData(file, readFileDataCallback);
-    }
-}
-
-function readFileDataCallback(results) {
-    fileData = results.data;
-    if (fileData.length == 0) {
-        console.log("File Empty");
-        warning("File Empty");
-    } else if (fileData.length > 5000) {
-        console.log("File size exceeds limit");
-        warning("The file size (" + fileData.length + ") exceeds the limit of 5000.");
-    } else {
-        const firstRecord = fileData[0];
-        const updatedKeys = Object.keys(firstRecord).map(key => key.toLowerCase().trim());
-
-        const fileDataFiltered = fileData.map(obj => {
-          const lowercaseHeaders = {};
-          Object.keys(obj).forEach(key => {
-            const lowercaseKey = key.toLowerCase().trim();
-            if (lowercaseKey !== "") {  // Skip empty headers
-                lowercaseHeaders[lowercaseKey] = obj[key];
-            }
-          });
-          return lowercaseHeaders;
-        });
-        fileData= fileDataFiltered;
-        if (!checkHeaderMatch(fileData[0])) {
-            console.log("File headers do not match the expected format");
-            warning("File headers do not match the expected format");
-            return;
-        }
-        uploadRows();
-    }
-}
-
-function checkHeaderMatch(uploadedHeaders) {
-    var expectedHeaders = ["title", "author", "genre", "price", "availability"];
-    var extractedHeaders = Object.keys(uploadedHeaders);
-    extractedHeaders = extractedHeaders.map(header => header.toLowerCase().trim());
-
-    if (extractedHeaders.length !== expectedHeaders.length) {
-        return false;
-    }
-    extractedHeaders.sort();
-    for (var i = 0; i < expectedHeaders.length; i++) {
-        if (extractedHeaders[i] !== expectedHeaders[i]) {
-            return false;
-        }
-    }
-    return true;
-}
-
-function uploadRows() {
-    //Update progress
-    updateUploadDialog();
-    var row= fileData;
-    var json = JSON.stringify(row);
-    var url = getBookListUrl();
-    console.log(json);
-    //Make ajax call
-    $.ajax({
-        url: url,
-        type: 'POST',
-        data: json,
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        success: function(response) {
-            $('#upload-book-modal').modal('hide');
-            refresh();
-            success("File uploaded successfully");
-        },
-        error: function(response) {
-            var resp = JSON.parse(response.responseText);
-            const inputString = resp.message;
-            // Remove the square brackets at the beginning and end of the string
-            const cleanedString = inputString.slice(1, -1);
-
-            // Split the string using the comma (,) as the delimiter
-            const errorArray = cleanedString.split(', ');
-
-            var i=0;
-            // Loop through the errorArray and format each error as a CSV row
-            errorArray.forEach((error) => {
-              const index = error.indexOf('=');
-              const errorCode = error.slice(0, index);
-              const errorMessage = error.slice(index + 1);
-              const errorRowIndex = parseInt(errorCode, 10);
-                if (!isNaN(errorRowIndex) && errorRowIndex >= 0 && errorRowIndex < fileData.length) {
-                  if (!errorData[i]) {
-                    errorData[i] = Object.assign({}, fileData[errorRowIndex], { error: errorMessage });
-                    i++;
-                  }
-                }
-            });
-            updateUploadDialog();
-            $("#download-errors").prop('disabled', false);
-            danger("Invalid file: File has errors");
-
-        }
-    });
-//    $("#download-errors").prop('disabled', false);
-}
-
-function downloadErrors() {
-    if (errorData.length === 0) {
-        $("#download-errors").prop('disabled', true);
-        warning("No errors to download");
-        return;
-    }
-    writeFileData(errorData);
-}
-
 //UI DISPLAY METHODS
 
 function displayBookList(data) {
@@ -289,43 +161,6 @@ function displayEditBook(id) {
         },
         error: handleAjaxError
     });
-}
-
-function resetUploadDialog() {
-    //Reset file name
-    var $file = $('#bookFile');
-    $file.val('');
-    $('#bookFileName').html("Choose File");
-    //Reset various counts
-    processCount = 0;
-    fileData = [];
-    errorData = [];
-    fileErrorData=[];
-    //Update counts
-    updateUploadDialog();
-}
-
-function updateUploadDialog() {
-    $('#rowCount').html("" + fileData.length);
-    $('#processCount').html("" + processCount);
-    $('#errorCount').html("" + errorData.length);
-}
-
-function updateFileName() {
-    processCount = 0;
-    fileData = [];
-    errorData = [];
-    updateUploadDialog();
-    $("#download-errors").prop('disabled', true);
-    var $file = $('#bookFile');
-    var fileName = $file.val();
-    $('#bookFileName').html(fileName);
-}
-
-function displayUploadData() {
-    $("#download-errors").prop('disabled', true);
-    resetUploadDialog();
-    $('#upload-book-modal').modal('toggle');
 }
 
 function displayBook(data) {
@@ -364,10 +199,6 @@ function init() {
     $('#add-book').click(addBook);
     $('#update-book').click(updateBook);
     $('#refresh-data').click(refresh);
-    $('#upload-data').click(displayUploadData);
-    $('#process-data').click(processData);
-    $('#download-errors').click(downloadErrors);
-    $('#bookFile').on('change', updateFileName);
     getBookList();
     table = $('#book-table').DataTable({
       columnDefs: [
