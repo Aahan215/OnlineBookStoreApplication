@@ -1,0 +1,119 @@
+<!doctype html>
+
+<html lang="en">
+
+<head th:replace="snippets.html :: name_head"></head>
+
+<body>
+
+<nav th:replace="snippets.html :: name_app_navbar"></nav>
+
+<div class="container">
+
+    <!-- Top row with form-->
+    <div class="row mt-5">
+        <div class="col-12">
+            <form id="createOrder-form">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="searchTitle">Title</label>
+                            <input type="text" class="form-control" name="title" id="searchTitle" placeholder="Enter Title">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="searchAuthor">Author</label>
+                            <input type="text" class="form-control" name="author" id="searchAuthor" placeholder="Enter Author">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="searchGenre">Genre</label>
+                            <input type="text"  class="form-control" name="genre" id="searchGenre" placeholder="Enter Genre">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary" id="refresh-data">Refresh</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+    </div>
+
+
+    <!-- Blank Row -->
+    <div class="row">
+        &nbsp;
+    </div>
+    <div class="row">
+
+        <!-- Table -->
+        <div class="col-12">
+            <table class="table table-striped" id="createOrder-table">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Availability</th>
+                    <th scope="col">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <a th:href="@{/ui/cart}" >
+        <button type="button" class="btn btn-primary mt-2 mb-3"  >View Cart</button>
+    </a>
+
+
+
+    <!-- CreateOrder Success Modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="success-createOrder-modal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Order</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center align-items-center" style="height: 150px;">
+                        <h2>Order placed successfully <i class="fas fa-check-circle ml-2 text-success"></i></h2>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="redirectToViewOrder">View Order</button>
+                    <button type="button" class="btn btn-primary" id="generateInvoice">Generate Invoice</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    <div class="submit">-->
+<!--        <button type="button" class="btn btn-primary" id="placeOrder">Place order</button>-->
+<!--    </div>-->
+
+</div> <!-- Container end-->
+
+<footer th:replace="snippets.html :: name_footer"></footer>
+
+<script th:src="@{/static/createOrder.js}"/>
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3b63acb9-10d4-48c3-ac85-67f21daec9c4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/aahan/onlineBookStore/helper/helper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/com.aahan.onlineBookStore/test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jetty.log" beforeDir="false" afterPath="$PROJECT_DIR$/jetty.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/controller/AppUiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/controller/AppUiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/controller/OrderItemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/dao/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/dao/OrderItemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/dao/OrderItemDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/dto/cartDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/dto/cartDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/dto/orderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/dto/orderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/dto/orderItemDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/model/EnumData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/model/EnumData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/model/OrderItemData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/model/OrderItemData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/model/OrderItemForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/pojo/OrderItemPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/pojo/OrderItemPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/pojo/OutwardOrderPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/pojo/OutwardOrderPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/service/OrderItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/service/OrderItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/util/ConversionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aahan/onlineBookStore/util/ConversionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/html/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/html/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/aahan/onlineBookStore/service/AbstractUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aahan/onlineBookStore/service/AbstractUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/aahan/onlineBookStore/service/BookServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aahan/onlineBookStore/service/BookServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/aahan/onlineBookStore/service/QaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/aahan/onlineBookStore/service/QaConfig.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2VC7wLjX7aKg8XW3l4zP2QhX3S8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Hp/Downloads/BookStore-20230911T032407Z-001/BookStore/OnlineBookStore/src/main/webapp/static",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hp\Downloads\BookStore-20230911T032407Z-001\BookStore\OnlineBookStore\src\main\webapp\static" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/static" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/html" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hp\Downloads\BookStore-20230911T032407Z-001\BookStore\OnlineBookStore\src\main\webapp\static\images" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.aahan.onlineBookStore.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.aahan.onlineBookStore.util" />
+      <recent name="com.aahan.onlineBookStore.dto" />
+      <recent name="com.aahan.onlineBookStore.service" />
+      <recent name="com.aahan.onlineBookStore" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.BookServiceTest">
+    <configuration name="BookServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="online-book-store" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aahan.onlineBookStore.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aahan.onlineBookStore.service" />
+      <option name="MAIN_CLASS_NAME" value="com.aahan.onlineBookStore.service.BookServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookServiceTest.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="online-book-store" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aahan.onlineBookStore.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aahan.onlineBookStore.service" />
+      <option name="MAIN_CLASS_NAME" value="com.aahan.onlineBookStore.service.BookServiceTest" />
+      <option name="METHOD_NAME" value="testAdd" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="online-book-store [jetty:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="jetty:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BookServiceTest" />
+        <item itemvalue="JUnit.BookServiceTest.testAdd" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b63acb9-10d4-48c3-ac85-67f21daec9c4" name="Changes" comment="" />
+      <created>1694328446785</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694328446785</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/OnlineBookStore$BookServiceTest.ic" NAME="BookServiceTest Coverage Results" MODIFIED="1694408658308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.aahan.onlineBookStore.service.*</FILTER>
+    </SUITE>
+  </component>
+</project>

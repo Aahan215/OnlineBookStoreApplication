@@ -1,0 +1,10 @@
+com\aahan\invoiceapp\dto\InvoiceDto.class
+com\aahan\invoiceapp\model\OrderItem.class
+com\aahan\invoiceapp\spring\ControllerConfig.class
+com\aahan\invoiceapp\spring\SpringConfig.class
+com\aahan\invoiceapp\controller\GenerateInvoiceController.class
+com\aahan\invoiceapp\service\GenerateInvoiceService.class
+com\aahan\invoiceapp\service\PDFFromFOP.class
+com\aahan\invoiceapp\model\InvoiceForm.class
+com\aahan\invoiceapp\service\CreateXMLFileJava.class
+com\aahan\invoiceapp\spring\WebInitializer.class

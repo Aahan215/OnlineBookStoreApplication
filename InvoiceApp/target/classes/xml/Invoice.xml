@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><invoice><order_id>0</order_id><order_date>string</order_date><order_item><id>0</id><title>string</title><author>string</author><genre>string</genre><quantity>0</quantity><price>0.0</price><amt>0.0</amt></order_item><amount>0.0</amount></invoice>
